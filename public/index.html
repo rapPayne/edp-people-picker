@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+  <title>Demo</title>
+</head>
+
+<body>
+  <h1>People Picker</h1>
+  <button onclick="getPeople()">Get people</button>
+  <button onclick="pickRandomPerson()">Pick a random person</button>
+  <h1>Unpicked people</h1>
+  <section id="unpickedPeople"></section>
+  <h1>Picked people</h1>
+  <section id="pickedPeople"></section>
+  <dialog>
+    <p class="errorMessage"></p>
+    <button onclick="d.close();">Close</button>
+  </dialog>
+</body>
+
+</html>
