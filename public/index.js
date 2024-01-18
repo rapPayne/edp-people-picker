@@ -1,10 +1,12 @@
 let errorMessage = "";
 let unpickedPeople = [];
 let pickedPeople = [];
+let pickedPerson;
 
 window.addEventListener('DOMContentLoaded', getPeople);
 async function getPeople() {
   const url = `/api/people`;
+  pickedPerson = undefined;
   pickedPeople = [];
   unpickedPeople = await fetch(url)
     .then((res) => res.json());
@@ -17,6 +19,8 @@ function drawPeople() {
   document.querySelector('section#unpickedPeople').innerHTML = unpickedHtml;
   const pickedHtml = pickedPeople.map(person => drawPerson(person)).join("");
   document.querySelector('section#pickedPeople').innerHTML = pickedHtml;
+  document.querySelector('section#pickedPerson').innerHTML = drawPerson(pickedPerson);
+
 }
 
 function pickRandomPerson() {
@@ -29,5 +33,6 @@ function pickRandomPerson() {
 }
 
 function drawPerson(person) {
+  if (!person) return "";
   return `<div class="person">${person.name}</div>`;
 }
