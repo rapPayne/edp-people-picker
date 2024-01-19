@@ -38,7 +38,7 @@ function drawPerson(person) {
   return `
   <div class="person" data-id="${person.id}">
    <p>${person.name}</p>
-   <img class="person-image" src="${person.picture}" alt="${person.name}" />
+   <img src="${person.picture}" alt="${person.name}" />
   </div>
   `;
 }
