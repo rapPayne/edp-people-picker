@@ -1,10 +1,10 @@
 // The web server
-import express from 'express';
-import fs from 'fs';
+import express from "express";
+import fs from "fs";
 
 const app = express();
 
-let db = JSON.parse(fs.readFileSync('db.json'));
+let db = JSON.parse(fs.readFileSync("db.json"));
 const people = db["people"];
 
 //Serve all the people at GET /people
