@@ -34,5 +34,10 @@ function pickRandomPerson() {
 
 function drawPerson(person) {
   if (!person) return "";
-  return `<div class="person">${person.name}</div>`;
+  return `
+  <div class="person" data-id="${person.id}">
+   <p>${person.name}</p>
+   <img src="${person.picture}" alt="${person.name}" />
+  </div>
+  `;
 }

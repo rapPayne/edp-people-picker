@@ -1,109 +1,109 @@
 {
   "people": [
     {
-      "id": 0,
+      "id": 1,
       "name": "Brian Murray",
-      "picture": ""
+      "picture": "/images/Brian.png"
     },
     {
-      "id": 0,
+      "id": 2,
       "name": "Daniel Janikowski",
-      "picture": ""
+      "picture": "/images/Dan.png"
     },
     {
-      "id": 0,
+      "id": 3,
       "name": "Jared Kozar",
-      "picture": ""
+      "picture": "/images/Jared.png"
     },
     {
-      "id": 0,
+      "id": 4,
       "name": "April Breen",
-      "picture": ""
+      "picture": "/images/April.png"
     },
     {
-      "id": 0,
+      "id": 5,
       "name": "Alessandro Gagarin",
-      "picture": ""
+      "picture": "/images/Alessandro.png"
     },
     {
-      "id": 0,
+      "id": 6,
       "name": "Aaron Wang",
-      "picture": ""
+      "picture": "/images/Aaron.png"
     },
     {
-      "id": 0,
+      "id": 7,
       "name": "Nicky Rathe",
-      "picture": ""
+      "picture": "/images/Nicky.png"
     },
     {
-      "id": 0,
+      "id": 8,
       "name": "Ben Lee",
-      "picture": ""
+      "picture": "/images/Ben.png"
     },
     {
-      "id": 0,
+      "id": 9,
       "name": "Hannah Good",
-      "picture": ""
+      "picture": "/images/Hannah.png"
     },
     {
-      "id": 0,
+      "id": 10,
       "name": "Michael Ambrose",
-      "picture": ""
+      "picture": "/images/Michael.png"
     },
     {
-      "id": 0,
+      "id": 11,
       "name": "Matthew Jones",
-      "picture": ""
+      "picture": "/images/Matt.png"
     },
     {
-      "id": 0,
+      "id": 12,
       "name": "Calder Waugh",
-      "picture": ""
+      "picture": "/images/Calder.png"
     },
     {
-      "id": 0,
-      "name": "Joshua Hoang",
-      "picture": ""
+      "id": 13,
+      "name": "Josh Hoang",
+      "picture": "/images/Josh.png"
     },
     {
-      "id": 0,
+      "id": 14,
       "name": "Zachary Mowry",
-      "picture": ""
+      "picture": "/images/Zach.png"
     },
     {
-      "id": 0,
+      "id": 15,
       "name": "Jacob Boyce",
-      "picture": ""
+      "picture": "/images/Jacob.png"
     },
     {
-      "id": 0,
+      "id": 16,
       "name": "Yiran Fitzpatrick",
-      "picture": ""
+      "picture": "/images/Yiran.png"
     },
     {
-      "id": 0,
+      "id": 17,
       "name": "Craig O'Loughlin",
-      "picture": ""
+      "picture": "/images/Craig.png"
     },
     {
-      "id": 0,
+      "id": 18,
       "name": "Kays Cetin",
       "picture": ""
     },
     {
-      "id": 0,
+      "id": 19,
       "name": "Allie Hanson",
-      "picture": ""
+      "picture": "/images/Allie.png"
     },
     {
-      "id": 0,
+      "id": 20,
       "name": "Rap",
-      "picture": ""
+      "picture": "/images/Rap.png"
     },
     {
-      "id": 0,
+      "id": 21,
       "name": "Ola Ekdahl",
-      "picture": ""
+      "picture": "/images/Ola.png"
     }
   ]
 }
