@@ -4,6 +4,12 @@ let pickedPeople = [];
 let pickedPerson;
 
 window.addEventListener('DOMContentLoaded', getPeople);
+
+function confirmAlert(text, callback) {
+  if (!confirm(text)) return;
+  callback();
+}
+
 async function getPeople() {
   const url = `/api/people`;
   pickedPerson = undefined;
