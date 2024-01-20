@@ -9,6 +9,12 @@
 
   & .person {
     flex: 1 1 250px;
+
+    & img {
+      width: 138px;
+      height: 138px;
+      object-fit: cover;
+    }
   }
 }
 
