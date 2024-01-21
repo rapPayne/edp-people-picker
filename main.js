@@ -8,9 +8,10 @@ let db = JSON.parse(fs.readFileSync('db.json'));
 const people = db["people"];
 
 //Serve all the people at GET /people
-app.get("/api/people", (req, res) => {
+app.get("/api/people", (re, res) => {
   res.send(people);
 });
+
 
 app.use(express.static("public"));
 
