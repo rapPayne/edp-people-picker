@@ -89,10 +89,22 @@ dialog button {
     height: 150px;
     border-radius: 2px;
   }
+
 }
 
 #pickedPerson {
   display: flex;
   justify-content: center;
 
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  & img {
+    max-height: 100px;
+    width: auto;
+  }
 }
