@@ -4,6 +4,22 @@ let pickedPeople = [];
 let pickedPerson;
 
 window.addEventListener('DOMContentLoaded', getPeople);
+
+function openDialogGetPeople() {
+  const textDialog = 'This will erase your current progress and reset everything. Are you sure?';
+  confirmDialog(textDialog, getPeople);
+}
+
+function confirmDialog(text, callback) {
+  const dialogConfirm = document.getElementById("dialogConfirm");
+  const elemText = document.getElementById("dialogConfirmText");
+  const buttonYes = document.getElementById("dialogConfirmYes");
+  elemText.innerText = text;
+  buttonYes.removeEventListener("click", callback);
+  buttonYes.addEventListener("click", callback);
+  dialogConfirm.showModal();
+}
+
 async function getPeople() {
   const url = `/api/people`;
   pickedPerson = undefined;
@@ -41,4 +57,3 @@ function drawPerson(person) {
   </div>
   `;
 }
-
