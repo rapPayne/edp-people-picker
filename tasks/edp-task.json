@@ -1,11 +1,16 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:397188165174:task-definition/edp-task:1",
     "containerDefinitions": [
         {
             "name": "people-picker",
             "image": "edp-ecr-repo/people-picker:latest",
             "cpu": 0,
-            "portMappings": [3500],
+            "portMappings": [
+                {
+                    "containerPort": 3500,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
             "essential": true,
             "environment": [],
             "environmentFiles": [],
@@ -16,17 +21,7 @@
     "family": "edp-task",
     "executionRoleArn": "arn:aws:iam::397188165174:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
     "volumes": [],
-    "status": "ACTIVE",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        }
-    ],
     "placementConstraints": [],
     "compatibilities": [
         "EC2",
@@ -40,7 +35,5 @@
         "FARGATE"
     ],
     "cpu": "1024",
-    "memory": "3072",
-    "registeredAt": "2024-01-22T12:12:41.655000-08:00",
-    "registeredBy": "arn:aws:iam::397188165174:user/ola-admin"
+    "memory": "3072"
 }
