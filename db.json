@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Brian Murray",
-      "picture": "/images/Brian.png"
+      "picture": "/images/Brian.jpeg"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
     {
       "id": 4,
       "name": "April Breen",
-      "picture": "/images/April.png"
+      "picture": "/images/april_and_JCP.png"
     },
     {
       "id": 5,
@@ -33,7 +33,7 @@
     {
       "id": 7,
       "name": "Nicky Rathe",
-      "picture": "/images/Nicky.png"
+      "picture": "/images/Nicky.jpg"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
     {
       "id": 19,
       "name": "Allie Hanson",
-      "picture": "/images/Allie.png"
+      "picture": "/images/Allie.jpg"
     },
     {
       "id": 20,
@@ -103,7 +103,7 @@
     {
       "id": 21,
       "name": "Ola Ekdahl",
-      "picture": "/images/Ola.png"
+      "picture": "/images/ola.jpg"
     }
   ]
 }

@@ -2,6 +2,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#pickedPerson {
+  & img {
+    width: 138px;
+    height: 138px;
+    object-fit: cover;
+  }
+}
+
 #pickedPeople,
 #unpickedPeople {
   display: flex;
@@ -9,6 +17,12 @@
 
   & .person {
     flex: 1 1 250px;
+
+    & img {
+      width: 138px;
+      height: 138px;
+      object-fit: cover;
+    }
   }
 }
 
@@ -29,4 +43,56 @@ dialog button {
   border: none;
   border-radius: 3px;
   margin: 10px;
+}
+
+.person {
+  border: 1px solid #FAF9F6;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  text-align: center;
+  max-width: 300px;
+  background-color: #2A9D8F;
+  border-radius: 10px;
+  box-shadow: black 0px 0px 10px 2px inset;
+  height: 225px;
+  padding: 25px;
+
+  & .person-name {
+    font-size: large;
+    font-style: bold;
+    font-weight: 700;
+    color: #E9C46A;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.53);
+    -webkit-box-shadow: -6px 6px 0px -3px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: -6px 6px 0px -3px rgba(0, 0, 0, 0.47);
+    box-shadow: -6px 6px 0px -3px rgba(0, 0, 0, 0.47);
+    background-color: #264653;
+    padding: 5px 0;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    margin: auto 10px 0 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 2px;
+  }
+
+  & .person-avi {
+    -webkit-box-shadow: 8px 8px 0px -3px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 8px 8px 0px -3px rgba(0, 0, 0, 0.47);
+    box-shadow: 8px 8px 0px -3px rgba(0, 0, 0, 0.47);
+    width: 150px;
+    height: 150px;
+    border-radius: 2px;
+  }
+}
+
+#pickedPerson {
+  display: flex;
+  justify-content: center;
+
 }

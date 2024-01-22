@@ -3,7 +3,16 @@ let unpickedPeople = [];
 let pickedPeople = [];
 let pickedPerson;
 
+const dialogConfirm = document.getElementById("dialogConfirm");
+const buttonYes = dialogConfirm.querySelector("#yes");
+buttonYes.addEventListener("click", getPeople);
+
 window.addEventListener('DOMContentLoaded', getPeople);
+
+function confirmDialog() {
+  dialogConfirm.showModal();
+}
+
 async function getPeople() {
   const url = `/api/people`;
   pickedPerson = undefined;
@@ -20,7 +29,6 @@ function drawPeople() {
   const pickedHtml = pickedPeople.map(person => drawPerson(person)).join("");
   document.querySelector('section#pickedPeople').innerHTML = pickedHtml;
   document.querySelector('section#pickedPerson').innerHTML = drawPerson(pickedPerson);
-
 }
 
 function pickRandomPerson() {
@@ -36,8 +44,8 @@ function drawPerson(person) {
   if (!person) return "";
   return `
   <div class="person" data-id="${person.id}">
-   <p>${person.name}</p>
-   <img src="${person.picture}" alt="${person.name}"/>
+   <p class="person-name">${person.name}</p>
+   <img class="person-avi" src="${person.picture}" alt="${person.name}" />
   </div>
   `;
 }
