@@ -11,7 +11,8 @@
 }
 
 #pickedPeople,
-#unpickedPeople {
+#unpickedPeople,
+#stashedPeople {
   display: flex;
   flex-wrap: wrap;
 
