@@ -3,20 +3,13 @@ let unpickedPeople = [];
 let pickedPeople = [];
 let pickedPerson;
 
+const dialogConfirm = document.getElementById("dialogConfirm");
+const buttonYes = dialogConfirm.querySelector("#yes");
+buttonYes.addEventListener("click", getPeople);
+
 window.addEventListener('DOMContentLoaded', getPeople);
 
-function openDialogGetPeople() {
-  const textDialog = 'This will erase your current progress and reset everything. Are you sure?';
-  confirmDialog(textDialog, getPeople);
-}
-
-function confirmDialog(text, callback) {
-  const dialogConfirm = document.getElementById("dialogConfirm");
-  const elemText = document.getElementById("dialogConfirmText");
-  const buttonYes = document.getElementById("dialogConfirmYes");
-  elemText.innerText = text;
-  buttonYes.removeEventListener("click", callback);
-  buttonYes.addEventListener("click", callback);
+function confirmDialog() {
   dialogConfirm.showModal();
 }
 
@@ -36,7 +29,6 @@ function drawPeople() {
   const pickedHtml = pickedPeople.map(person => drawPerson(person)).join("");
   document.querySelector('section#pickedPeople').innerHTML = pickedHtml;
   document.querySelector('section#pickedPerson').innerHTML = drawPerson(pickedPerson);
-
 }
 
 function pickRandomPerson() {

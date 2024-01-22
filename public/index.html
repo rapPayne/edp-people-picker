@@ -11,7 +11,7 @@
 
 <body>
   <h1>People Picker</h1>
-  <button onclick="openDialogGetPeople()">Get people</button>
+  <button onclick="confirmDialog()">Get people</button>
   <button onclick="pickRandomPerson()">Pick a random person</button>
   <h1>The lucky person</h1>
   <section id="pickedPerson"></section>
@@ -24,10 +24,10 @@
     <button onclick="d.close();">Close</button>
   </dialog>
   <dialog id="dialogConfirm">
-    <p id="dialogConfirmText">Are you sure?</p>
+    <p>This will erase your current progress and reset everything. Are you sure?</p>
     <form method="dialog">
       <button id="dialogConfirmNo">No</button>
-      <button id="dialogConfirmYes">Yes</button>
+      <button id="yes">Yes</button>
     </form>
   </dialog>
 </body>
