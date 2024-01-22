@@ -18,6 +18,7 @@ async function getPeople() {
   const url = `/api/people`;
   pickedPerson = undefined;
   pickedPeople = [];
+  stashedPeople = [];
   unpickedPeople = await fetch(url)
     .then((res) => res.json());
 
