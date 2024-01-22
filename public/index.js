@@ -44,8 +44,8 @@ function drawPerson(person) {
   if (!person) return "";
   return `
   <div class="person" data-id="${person.id}">
-   <p id="person-name">${person.name}</p>
-   <img id="person-avi" src="${person.picture}" alt="${person.name}" />
+   <p class="person-name">${person.name}</p>
+   <img class="person-avi" src="${person.picture}" alt="${person.name}" />
   </div>
   `;
 }
