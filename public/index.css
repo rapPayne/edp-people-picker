@@ -61,12 +61,7 @@ dialog button {
   height: 225px;
   padding: 25px;
 
-  & .person-name {
-    font-size: large;
-    font-style: bold;
-    font-weight: 700;
-    color: #E9C46A;
-    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.53);
+  & .person-name-container {
     -webkit-box-shadow: -6px 6px 0px -3px rgba(0, 0, 0, 0.47);
     -moz-box-shadow: -6px 6px 0px -3px rgba(0, 0, 0, 0.47);
     box-shadow: -6px 6px 0px -3px rgba(0, 0, 0, 0.47);
@@ -75,11 +70,21 @@ dialog button {
     width: fit-content;
     display: flex;
     align-items: center;
+    text-align: center;
     padding: 5px 10px;
     margin: auto 10px 0 0;
     height: 100px;
     width: 100px;
     border-radius: 2px;
+
+    & .person-name {
+      font-size: large;
+      font-style: bold;
+      font-weight: 700;
+      color: #E9C46A;
+      text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.53);
+      width: 100%;
+    }
   }
 
   & .person-avi {
