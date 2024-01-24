@@ -1,6 +1,7 @@
 let errorMessage = "";
 let unpickedPeople = [];
 let pickedPeople = [];
+let stashedPeople = [];
 let pickedPerson;
 
 const dialogConfirm = document.getElementById("dialogConfirm");
@@ -17,6 +18,7 @@ async function getPeople() {
   const url = `/api/people`;
   pickedPerson = undefined;
   pickedPeople = [];
+  stashedPeople = [];
   unpickedPeople = await fetch(url)
     .then((res) => res.json());
 
@@ -28,15 +30,34 @@ function drawPeople() {
   document.querySelector('section#unpickedPeople').innerHTML = unpickedHtml;
   const pickedHtml = pickedPeople.map(person => drawPerson(person)).join("");
   document.querySelector('section#pickedPeople').innerHTML = pickedHtml;
+  const stashedHtml = stashedPeople.map(person => drawPerson(person)).join("");
+  document.querySelector('section#stashedPeople').innerHTML = stashedHtml;
   document.querySelector('section#pickedPerson').innerHTML = drawPerson(pickedPerson);
 }
 
-function pickRandomPerson() {
-  const randomNumber = Math.floor(Math.random() * unpickedPeople.length);
-  pickedPerson = unpickedPeople[randomNumber];
+function getNextPerson() {
+  if (unpickedPeople.length !== 0) {
+    pickRandomPerson(unpickedPeople);
+    unpickedPeople = unpickedPeople.filter(person => person !== pickedPerson);
+  } else {
+    pickRandomPerson(stashedPeople);
+    stashedPeople = stashedPeople.filter(person => person !== pickedPerson);
+  }
+  drawPeople();
+}
+
+function pickRandomPerson(peopleArray) {
+  const randomNumber = Math.floor(Math.random() * peopleArray.length);
+  pickedPerson = peopleArray[randomNumber];
   pickedPeople = [...pickedPeople, pickedPerson];
-  unpickedPeople = unpickedPeople.filter(person => person !== pickedPerson);
   console.log(`Person is ${pickedPerson.name}`);
+}
+
+function stashPerson() {
+  if (!pickedPerson) return;
+  stashedPeople.push(pickedPerson);
+  pickedPeople = pickedPeople.filter(person => person !== pickedPerson);
+  pickedPerson = undefined;
   drawPeople();
 }
 
@@ -44,8 +65,10 @@ function drawPerson(person) {
   if (!person) return "";
   return `
   <div class="person" data-id="${person.id}">
-   <p class="person-name">${person.name}</p>
-   <img class="person-avi" src="${person.picture}" alt="${person.name}" />
+    <div class="person-name-container">
+      <p class="person-name">${person.name}</p>
+    </div>
+    <img class="person-avi" src="${person.picture}" alt="${person.name}" />
   </div>
   `;
 }

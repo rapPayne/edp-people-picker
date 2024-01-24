@@ -1,5 +1,39 @@
 :root {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #f8e16c;
+}
+h1 {
+  font-size: 80px;
+  margin: 0px;
+  color: #156064;
+}
+
+h2 {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  color: #156064;
+}
+
+button {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: center;
+  background: #FB8f67;
+  color: #156064;
+  border: #000000;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 3px;
+  margin: 10px;
+  padding: 4px 6px;
+}
+
+div.duck {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 12px
 }
 
 #pickedPerson {
@@ -11,9 +45,12 @@
 }
 
 #pickedPeople,
-#unpickedPeople {
+#unpickedPeople,
+#stashedPeople {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 
   & .person {
     flex: 1 1 250px;
@@ -27,26 +64,15 @@
 }
 
 dialog {
-  background: #fff;
-  box-shadow: 2px 2px 4px black;
+  background: #FFC2B4;
+  border-radius: 15px;
+  filter: drop-shadow(2px 2px 4px #000000);
   padding: 10px;
   max-width: 90%;
-}
-
-dialog::backdrop {
-  background: rgba(0, 0, 0, .4);
-}
-
-dialog button {
-  background: #007bff;
-  color: #fff;
   border: none;
-  border-radius: 3px;
-  margin: 10px;
 }
 
 .person {
-  border: 1px solid #FAF9F6;
   margin: 5px;
   padding: 5px;
   display: flex;
@@ -54,31 +80,36 @@ dialog button {
   align-items: space-evenly;
   text-align: center;
   max-width: 300px;
-  background-color: #2A9D8F;
+  background-color: #00c49a;
   border-radius: 10px;
-  box-shadow: black 0px 0px 10px 2px inset;
+  filter: drop-shadow(2px 2px 4px #000000);
   height: 225px;
   padding: 25px;
 
-  & .person-name {
-    font-size: large;
-    font-style: bold;
-    font-weight: 700;
-    color: #E9C46A;
-    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.53);
+  & .person-name-container {
     -webkit-box-shadow: -6px 6px 0px -3px rgba(0, 0, 0, 0.47);
     -moz-box-shadow: -6px 6px 0px -3px rgba(0, 0, 0, 0.47);
     box-shadow: -6px 6px 0px -3px rgba(0, 0, 0, 0.47);
-    background-color: #264653;
+    background-color: #156064;
     padding: 5px 0;
     width: fit-content;
     display: flex;
     align-items: center;
+    text-align: center;
     padding: 5px 10px;
     margin: auto 10px 0 0;
     height: 100px;
     width: 100px;
     border-radius: 2px;
+
+    & .person-name {
+      font-size: large;
+      font-style: bold;
+      font-weight: 700;
+      color: #f8e16c;
+      text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.53);
+      width: 100%;
+    }
   }
 
   & .person-avi {
@@ -89,10 +120,33 @@ dialog button {
     height: 150px;
     border-radius: 2px;
   }
+
 }
 
 #pickedPerson {
   display: flex;
   justify-content: center;
 
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  background-color: #00C49A;
+  border-radius: 16px;
+  justify-content: center;
+  padding: 16px 18px;
+  filter: drop-shadow(2px 2px 4px #000000);
+  & img {
+    max-height: 100px;
+    width: auto;
+  }
+}
+
+section.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
 }
