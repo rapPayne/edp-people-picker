@@ -11,20 +11,23 @@
 
 <body>
   <header>
-    <h1>People Picker</h1>
-    <img class="duck" src="duck.png" />
+      <h1>People Picker</h1>
+      <div class="duck">
+        <img class="duck" src="duck.png" />
+      </div>
   </header>
-  
-  <button onclick="confirmDialog()">Get people</button>
-  <button onclick="getNextPerson()">Pick a random person</button>
-  <button onclick="stashPerson()">Stash</button>
-  <h1>The lucky person</h1>
+  <section class="buttons">
+    <button onclick="confirmDialog()">Get people</button>
+    <button onclick="getNextPerson()">Pick a random person</button>
+    <button onclick="stashPerson()">Stash</button>
+  </section>
+  <h2>The lucky person</h2>
   <section id="pickedPerson"></section>
-  <h1>Unpicked people</h1>
+  <h2>Unpicked people</h2>
   <section id="unpickedPeople"></section>
-  <h1>Stashed people</h1>
+  <h2>Stashed people</h2>
   <section id="stashedPeople"></section>
-  <h1>Picked people</h1>
+  <h2>Picked people</h2>
   <section id="pickedPeople"></section>
   <dialog>
     <p class="errorMessage"></p>
