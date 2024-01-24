@@ -150,3 +150,41 @@ section.buttons {
   justify-content: center;
   margin-top: 24px;
 }
+
+.star {
+  position: absolute;
+  bottom: 50%; 
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  /* background-color: red; */
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.animate {
+  animation: shootStar 2s linear forwards;
+}
+
+@keyframes shootStar {
+  0% {
+      transform: translate(-50%, 0) scale(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-50%, -300px) scale(1.5);
+      opacity: 0;
+  }
+}
+
+/* Individual animations for each star to vary the effect */
+#star1 {
+  background-color: blue;
+  animation-delay: 0s;
+}
+#star2 {
+  background-color: red;
+  animation-delay: 0.5s;
+}
+#star3 {
+  background-color: white;
+  animation-delay: 1s;
+}
