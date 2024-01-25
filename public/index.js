@@ -39,6 +39,19 @@ function getNextPerson() {
   if (unpickedPeople.length !== 0) {
     pickRandomPerson(unpickedPeople);
     unpickedPeople = unpickedPeople.filter(person => person !== pickedPerson);
+
+    const stars = document.querySelectorAll('.star');
+    stars.forEach(function(star) {
+      // Remove the class to reset the animation
+      star.classList.remove('animate');
+        
+      // Trigger reflow to restart the animation
+      void star.offsetWidth;
+
+      // Add the class back to start the animation
+      star.classList.add('animate');
+    });
+
   } else {
     pickRandomPerson(stashedPeople);
     stashedPeople = stashedPeople.filter(person => person !== pickedPerson);
