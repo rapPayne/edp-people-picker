@@ -21,7 +21,7 @@ export function App() {
       <header>
         <h1>People Picker</h1>
         <div className="duck">
-          <img className="duck" src="/duck.png" />
+          <img className="duck" src="/images/duck.png" />
         </div>
 
       </header>
