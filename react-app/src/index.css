@@ -1,0 +1,95 @@
+:root {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  --dark1: #156064;
+  --light1: #f8e16c;
+  --light2: #FFC2B4;
+  --accent1: #00c49a;
+  background-color: var(--light1);
+}
+
+h1 {
+  font-size: 80px;
+  margin: 0px;
+  color: var(--dark1);
+}
+
+h2 {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  color: var(--dark1);
+}
+
+dialog {
+  background: var(--light2);
+  border-radius: 15px;
+  filter: drop-shadow(2px 2px 4px var(--dark1));
+  padding: 10px;
+  max-width: 90%;
+  border: none;
+}
+
+#pickedPerson {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  background-color: var(--accent1);
+  border-radius: 16px;
+  justify-content: center;
+  padding: 16px 18px;
+  filter: drop-shadow(2px 2px 4px var(--dark1));
+
+  & img {
+    max-height: 100px;
+    width: auto;
+  }
+}
+
+
+.star {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.animate {
+  animation: shootStar 2s linear forwards;
+}
+
+@keyframes shootStar {
+  0% {
+    transform: translate(-50%, 0) scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, -300px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Individual animations for each star to vary the effect */
+#star1 {
+  background-color: blue;
+  animation-delay: 0s;
+}
+
+#star2 {
+  background-color: red;
+  animation-delay: 0.5s;
+}
+
+#star3 {
+  background-color: white;
+  animation-delay: 1s;
+}
