@@ -41,10 +41,10 @@ function getNextPerson() {
     unpickedPeople = unpickedPeople.filter(person => person !== pickedPerson);
 
     const stars = document.querySelectorAll('.star');
-    stars.forEach(function(star) {
+    stars.forEach(star => {
       // Remove the class to reset the animation
       star.classList.remove('animate');
-        
+
       // Trigger reflow to restart the animation
       void star.offsetWidth;
 
