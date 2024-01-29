@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Brian Murray",
+    "picture": "/images/Brian.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Daniel Janikowski",
+    "picture": "/images/Dan.png"
+  },
+  {
+    "id": 3,
+    "name": "Jared Kozar",
+    "picture": "/images/Jared.png"
+  },
+  {
+    "id": 4,
+    "name": "April Breen",
+    "picture": "/images/april_and_JCP.png"
+  },
+  {
+    "id": 5,
+    "name": "Alessandro Gagarin",
+    "picture": "/images/Alessandro.png"
+  },
+  {
+    "id": 6,
+    "name": "Aaron Wang",
+    "picture": "/images/Aaron.png"
+  },
+  {
+    "id": 7,
+    "name": "Nicky Rathe",
+    "picture": "/images/Nicky.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Ben Lee",
+    "picture": "/images/Ben.png"
+  },
+  {
+    "id": 9,
+    "name": "Hannah Good",
+    "picture": "/images/Hannah.png"
+  },
+  {
+    "id": 10,
+    "name": "Michael Ambrose",
+    "picture": "/images/Michael.png"
+  },
+  {
+    "id": 11,
+    "name": "Matthew Jones",
+    "picture": "/images/Matt.png"
+  },
+  {
+    "id": 12,
+    "name": "Calder Waugh",
+    "picture": "/images/Calder.png"
+  },
+  {
+    "id": 13,
+    "name": "Josh Hoang",
+    "picture": "/images/Josh.jpeg"
+  },
+  {
+    "id": 14,
+    "name": "Zachary Mowry",
+    "picture": "/images/Zach.png"
+  },
+  {
+    "id": 15,
+    "name": "Jacob Boyce",
+    "picture": "/images/Jacob.png"
+  },
+  {
+    "id": 16,
+    "name": "Yiran Fitzpatrick",
+    "picture": "/images/Yiran.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Craig O'Loughlin",
+    "picture": "/images/Craig.png"
+  },
+  {
+    "id": 18,
+    "name": "Kays Cetin",
+    "picture": ""
+  },
+  {
+    "id": 19,
+    "name": "Allie Hanson",
+    "picture": "/images/Allie.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Rap",
+    "picture": "/images/Rap.png"
+  },
+  {
+    "id": 21,
+    "name": "Ola Ekdahl",
+    "picture": "/images/ola.jpg"
+  }
+]
