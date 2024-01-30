@@ -57,3 +57,13 @@ $ mongod
 ```bash
 $ mongoimport --db edp --collection people --file db.json --jsonArray
 ```
+
+
+....
+
+
+9. Start the web server
+
+```bash
+$ npm run start
+```
