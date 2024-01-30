@@ -36,7 +36,7 @@ app.get("/api/people/:id", async (req, res) => {
     const client = await MongoClient.connect('mongodb://localhost:27017');
     const db = client.db('edp');
     const collection = db.collection('people');
-    const person = await collection.findOne({'id': +id});
+    const person = await collection.findOne({'_id': +id});
     client.close();
     if(person) {
       res.json(person);

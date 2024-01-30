@@ -8,7 +8,7 @@ export function People({ people, header }) {
     <section className="People">
       <h2>{header}</h2>
       <div className="people-wrapper">
-        {people.map(person => <PersonCard person={person} key={person.name} />)}
+        {people.map(person => <PersonCard person={person} key={person._id} />)}
       </div>
     </section>
   )
