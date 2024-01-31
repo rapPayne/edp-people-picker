@@ -56,7 +56,7 @@ $ mongod
 9. Back in the first terminal, import data from `db.json`
 
 ```bash
-$ mongoimport --db edp --collection people --file db.json --jsonArray
+$ mongoimport --db edp --collection people --file mongodb-data.json --jsonArray
 ```
 
 10. Start the web server
