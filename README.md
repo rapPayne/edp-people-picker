@@ -39,31 +39,30 @@ $ npm install
 ```bash
 $ npm run build
 ```
+6. Copy the generated `dist` directory into the `public` directory
 
-6. Change back into root `edp-people-picker` directory
+7. Change back into root `edp-people-picker` directory
 
 ```bash
 $ cd ..
 ```
 
-7. In a seperate terminal, start your mongo server
+8. Open a second terminal. Start your MongoDB server there.
 
 ```bash
 $ mongod
 ```
 
-8. In the first terminal, import data from `db.json`
+9. Back in the first terminal, import data from `db.json`
 
 ```bash
 $ mongoimport --db edp --collection people --file db.json --jsonArray
 ```
 
-
-....
-
-
-9. Start the web server
+10. Start the web server
 
 ```bash
 $ npm run start
 ```
+
+11. Navigate to `http://localhost:3500/index.html`
