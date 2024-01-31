@@ -1,5 +1,4 @@
-{
-  "people": [
+[    
     {
       "id": 1,
       "name": "Brian Murray",
@@ -105,5 +104,4 @@
       "name": "Ola Ekdahl",
       "picture": "/images/ola.jpg"
     }
-  ]
-}
+]
