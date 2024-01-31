@@ -1,6 +1,6 @@
 // The web server
 import express from 'express';
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 // import fs from 'fs';
 
 const app = express();
@@ -36,7 +36,7 @@ app.get("/api/people/:id", async (req, res) => {
     const client = await MongoClient.connect('mongodb://localhost:27017');
     const db = client.db('edp');
     const collection = db.collection('people');
-    const person = await collection.findOne({'_id': +id});
+    const person = await collection.findOne({'_id': new ObjectId(id)});
     client.close();
     if(person) {
       res.json(person);
