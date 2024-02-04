@@ -1,3 +1,7 @@
+# Temp files
+people.json
+
+__pycache__/
 *.pem
 **/.DS_Store
 .vscode/*
