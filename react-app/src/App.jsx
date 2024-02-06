@@ -3,6 +3,7 @@ import { PickerButtons } from './PickerButtons';
 import { getPeople } from './getPeople';
 import { People } from './People';
 import { PersonCard } from './PersonCard';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export function App() {
   let [selectedPerson, setSelectedPerson] = useState(undefined);
@@ -17,7 +18,10 @@ export function App() {
 
   console.log(selectedPerson?.name, unselectedPeople?.length, selectedPeople?.length, stashedPeople?.length);
   return (
+
     <>
+
+
       <header>
         <h1>People Picker</h1>
         <div className="duck">
@@ -26,16 +30,26 @@ export function App() {
 
       </header>
       <main>
-        <>
-          <PickerButtons getAllThePeople={getAllThePeople} pickRandomPerson={pickRandomPerson} stashPerson={stashPerson} />
-          {selectedPerson && <section>
-            <h1>The Lucky Person</h1>
-            <PersonCard person={selectedPerson} />
-          </section>}
-          <People people={unselectedPeople} header="To be chosen" />
-          <People people={stashedPeople} header="Stashed" />
-          <People people={selectedPeople} header="Chosen already" />
-        </>
+        <BrowserRouter>
+          <Routes>
+            <Route index path="/index.html" element={
+              <>
+                <PickerButtons getAllThePeople={getAllThePeople} pickRandomPerson={pickRandomPerson} stashPerson={stashPerson} />
+                {selectedPerson && <section>
+                  <h1>The Lucky Person</h1>
+                  <PersonCard person={selectedPerson} />
+                </section>}
+                <People people={unselectedPeople} header="To be chosen" />
+                <People people={stashedPeople} header="Stashed" />
+                <People people={selectedPeople} header="Chosen already" />
+              </>
+            }>
+
+            </Route>
+
+          </Routes>
+        </BrowserRouter>
+
       </main >
       <footer>
         Copyright &copy; {(new Date()).getFullYear()} us.com
