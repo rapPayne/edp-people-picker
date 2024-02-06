@@ -3,6 +3,7 @@ import { PickerButtons } from './PickerButtons';
 import { getPeople } from './getPeople';
 import { People } from './People';
 import { PersonCard } from './PersonCard';
+import { PickedPerson } from './PickedPerson';
 
 export function App() {
   let [selectedPerson, setSelectedPerson] = useState(undefined);
@@ -29,8 +30,7 @@ export function App() {
         <>
           <PickerButtons getAllThePeople={getAllThePeople} pickRandomPerson={pickRandomPerson} stashPerson={stashPerson} />
           {selectedPerson && <section>
-            <h1>The Lucky Person</h1>
-            <PersonCard person={selectedPerson} />
+            <PickedPerson person={selectedPerson} />
           </section>}
           <People people={unselectedPeople} header="To be chosen" />
           <People people={stashedPeople} header="Stashed" />
