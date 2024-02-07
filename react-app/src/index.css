@@ -52,6 +52,23 @@ header {
 }
 
 
+.Popup {
+  background-color: var(--light1);
+  filter: drop-shadow(2px 2px 4px black);
+}
+
+.Popup h2 {
+  display: flex;
+  justify-content: center;
+  padding: 0px 18px;
+}
+
+.Popup::backdrop {
+  background-color: #f8e16c;
+  opacity: 0.60;
+}
+
+
 .star {
   position: absolute;
   bottom: 50%;
